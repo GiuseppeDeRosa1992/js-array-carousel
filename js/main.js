@@ -7,7 +7,9 @@ console.log(imgList)
 let imgBlock;
 let nextImg;
 
-//Inizio ciclo
+//Richiamo tramite id il bottone dell'html
+document.getElementById("next").addEventListener("click", function() {
+    //Inizio ciclo
 for (let i = 0; i < imgList.length; i++) {
     //creo la costante img e gli dico che è uguale al numero del ciclo che in quel momento ha imgList
     const img = imgList[i]
@@ -24,5 +26,4 @@ for (let i = 0; i < imgList.length; i++) {
 //metto il dispaly block alle immagini successive uno per volta
 imgList[imgBlock+1].classList.add("block")
 console.log("Chi ha adesso display block?", imgBlock + 1)
-
-
+})
