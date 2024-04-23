@@ -17,12 +17,12 @@ for (let i = 0; i < imgList.length; i++) {
     if(img.classList.contains("block")) {
         img.classList.remove("block");
         console.log("ho tolto block all'immagine?", i);
+        //do alla variabile imgBlock lo stesso valore di i senno non viene visto fuori dal ciclo questo valore
         imgBlock = i;
-    } 
+    }
 }
-
-//creo variabile nextImg e gli dico che e uguale alla variabile imgBlock +1 (imgBlock vale il valore del ciclo for )
-nextImg = imgBlock + 1;
-
+//metto il dispaly block alle immagini successive uno per volta
+imgList[imgBlock+1].classList.add("block")
+console.log("Chi ha adesso display block?", imgBlock + 1)
 
 
